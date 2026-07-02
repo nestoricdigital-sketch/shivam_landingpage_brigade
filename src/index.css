@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+/* ─── CSS Custom Properties ─────────────────────────────────
+   Kept here because many components use var() inside style={{}}
+   for complex multi-stop gradients that Tailwind cannot express.
+────────────────────────────────────────────────────────────── */
+:root {
+  --green: #1E5A3A;
+  --green-dark: #153f29;
+  --green-light: #2a7a50;
+  --gold: #C8A96A;
+  --gold-light: #dfc08a;
+  --gold-dark: #a8843f;
+  --dark: #0d1a12;
+  --dark-mid: #1a2e1f;
+  --beige: #F8F8F6;
+  --text-body: #3d3d3d;
+  --text-muted: #7a7a7a;
+}
+
+/* ─── Base reset ─────────────────────────────────────────── */
+/* *,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+} */
+
+/* html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #F8F8F6;
+  color: #3d3d3d;
+  overflow-x: hidden;
+} */
+
+/* ─── Scrollbar ──────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F8F8F6;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1E5A3A;
+  border-radius: 3px;
+}
+
+/* ─── Text selection ─────────────────────────────────────── */
+::selection {
+  background: #C8A96A;
+  color: #0d1a12;
+}
+
+/* ─── Image lazy-load fade-in ────────────────────────────── */
+img[loading="lazy"] {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+img[loading="lazy"].loaded {
+  opacity: 1;
+}

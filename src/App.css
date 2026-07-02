@@ -1,0 +1,33 @@
+.App {
+  max-width: 1600px;
+  /* or whatever you prefer */
+  margin: auto auto;
+  /* centers it horizontally */
+  padding: 0rem;
+  /* overflow-x: hidden; */
+}
+
+/* ─── Spin keyframe (Tailwind v4 doesn't auto-inject this) ── */
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* ─── Group-hover inline width override ─────────────────────
+   Required for the highlight card bottom-line animation where
+   Tailwind's group-hover:w-full needs !important to override
+   the inline width:0% set directly on the element.
+────────────────────────────────────────────────────────────── */
+.group:hover .group-hover\:w-full {
+  width: 100% !important;
+}
