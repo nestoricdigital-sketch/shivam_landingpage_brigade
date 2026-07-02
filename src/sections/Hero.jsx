@@ -173,7 +173,7 @@ export default function Hero() {
                 title="Book a Site Visit"
                 subtitle="Our consultant will call you within 30 minutes."
                 submitLabel="Request a Callback"
-                tableName="enquiries"
+                tableName="shivambrigade"
                 extraData={{ form_location: 'hero' }}
               />
             </motion.div>

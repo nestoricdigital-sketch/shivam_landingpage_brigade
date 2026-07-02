@@ -108,7 +108,7 @@ export default function Enquiry() {
               title="Get Exclusive Details"
               subtitle="Fill in your details and our team will get in touch shortly."
               submitLabel="Book My Site Visit"
-              tableName="enquiries"
+              tableName="shivambrigade"
               extraData={{ form_location: 'enquiry_section' }}
             />
           </motion.div>

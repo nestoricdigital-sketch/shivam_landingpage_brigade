@@ -33,12 +33,12 @@ export default function Footer() {
               A 14-acre luxury residential community with 80% open green spaces and
               1124 premium homes in Yelahanka, North Bengaluru.
             </p>
-            <div className="inline-block mt-4 bg-[rgba(200,169,106,0.1)] border border-[rgba(200,169,106,0.25)]
+            {/* <div className="inline-block mt-4 bg-[rgba(200,169,106,0.1)] border border-[rgba(200,169,106,0.25)]
                             rounded-lg px-[0.875rem] py-2">
               <span className="font-['Inter',sans-serif] text-[0.7rem] text-[#C8A96A] tracking-[0.06em]">
                 RERA: PRM/KA/RERA/1251/310/PR/000000/000000
               </span>
-            </div>
+            </div> */}
           </div>
 
           {/* Quick Links */}
@@ -73,16 +73,16 @@ export default function Footer() {
                 <Phone size={16} color="#C8A96A" className="mt-0.5 shrink-0" />
                 <span className="font-['Inter',sans-serif] text-[0.875rem] text-white/50
                                  transition-colors duration-200 group-hover:text-[#C8A96A]">
-                  +91 98765 43210
+                  +91 8618297315
                 </span>
               </a>
-              <a href="mailto:sales@brigadeeternia.in" className="flex items-start gap-3 no-underline group">
+              {/* <a href="mailto:sales@brigadeeternia.in" className="flex items-start gap-3 no-underline group">
                 <Mail size={16} color="#C8A96A" className="mt-0.5 shrink-0" />
                 <span className="font-['Inter',sans-serif] text-[0.875rem] text-white/50
                                  transition-colors duration-200 group-hover:text-[#C8A96A]">
                   sales@brigadeeternia.in
                 </span>
-              </a>
+              </a> */}
               <div className="flex items-start gap-3">
                 <MapPin size={16} color="#C8A96A" className="mt-0.5 shrink-0" />
                 <span className="font-['Inter',sans-serif] text-[0.875rem] text-white/50 leading-[1.65]">

@@ -119,7 +119,7 @@ export default function ContactForm({
   title = 'Get Exclusive Details',
   subtitle = 'Fill in your details and our team will get in touch shortly.',
   submitLabel = 'Book My Site Visit',
-  tableName = 'enquiries',
+  tableName = 'shivambrigade',
   formId = 'contact-form',
   onSuccess,
   extraData = {},
@@ -137,36 +137,89 @@ export default function ContactForm({
     if (serverErr) setServerErr('');
   };
 
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   const errs = validate(form);
+  //   if (Object.keys(errs).length) { setErrors(errs); return; }
+
+  //   setSubmitting(true);
+  //   setServerErr('');
+
+  //   try {
+  //     const payload = {
+  //       name: form.name.trim(),
+  //       phone: form.phone.trim(),
+  //       email: form.email.trim() || null,
+  //       message: form.message.trim() || null,
+  //       // source_url: typeof window !== 'undefined' ? window.location.href : null,
+  //       // created_at: new Date().toISOString(),
+  //       // ...extraData,
+  //     };
+
+  //     const { error } = await supabase.from(tableName).insert([payload]);
+  //     if (error) throw error;
+
+  //     setSubmitted(true);
+  //     onSuccess?.({ form, payload });
+  //   } catch (err) {
+  //     console.error('[ContactForm] Supabase error:', err);
+  //     setServerErr(
+  //       err?.message?.includes('fetch')
+  //         ? 'Network error — please check your connection and try again.'
+  //         : 'Something went wrong. Please try again or call us directly.',
+  //     );
+  //   } finally {
+  //     setSubmitting(false);
+  //   }
+  // };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const errs = validate(form);
-    if (Object.keys(errs).length) { setErrors(errs); return; }
+
+    // Validate all fields
+    const validationErrors = validate(form);
+    setErrors(validationErrors);
+
+    if (Object.keys(validationErrors).length > 0) return;
 
     setSubmitting(true);
     setServerErr('');
 
     try {
-      const payload = {
-        name: form.name.trim(),
-        phone: form.phone.trim(),
-        email: form.email.trim() || null,
-        message: form.message.trim() || null,
-        source_url: typeof window !== 'undefined' ? window.location.href : null,
-        created_at: new Date().toISOString(),
-        ...extraData,
-      };
+      const { error } = await supabase.from(tableName).insert([
+        {
+          full_name: form.name.trim(),
+          phone: form.phone.trim(),
+          email: form.email.trim() || null,
+          message: form.message.trim() || null,
+          // source: typeof window !== 'undefined' ? window.location.href : null,
+          // ...extraData,
+        },
+      ]);
 
-      const { error } = await supabase.from(tableName).insert([payload]);
       if (error) throw error;
 
       setSubmitted(true);
-      onSuccess?.({ form, payload });
-    } catch (err) {
-      console.error('[ContactForm] Supabase error:', err);
+
+      // Clear form
+      setForm({
+        name: '',
+        phone: '',
+        email: '',
+        message: '',
+      });
+
+      // Clear validation errors
+      setErrors({});
+
+      onSuccess?.();
+    } catch (error) {
+      console.error('Supabase error:', error);
+
       setServerErr(
-        err?.message?.includes('fetch')
-          ? 'Network error — please check your connection and try again.'
-          : 'Something went wrong. Please try again or call us directly.',
+        error?.message?.includes('fetch')
+          ? 'Network error. Please check your internet connection.'
+          : 'Something went wrong. Please try again.'
       );
     } finally {
       setSubmitting(false);
