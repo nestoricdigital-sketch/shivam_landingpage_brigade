@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Phone, MessageCircle } from 'lucide-react';
+import wha from '../assets/wApp.webp';
 
 /* ── btn-gold Tailwind string ─────────────────────────────── */
 const BTN_GOLD =
@@ -26,7 +27,7 @@ export default function FloatingCTA() {
                    hover:scale-[1.08] hover:-translate-y-[3px]
                    hover:shadow-[0_16px_48px_rgba(0,0,0,0.3)]
                    flex items-center justify-center
-                   w-14 h-14 bg-[#25D366]"
+                   w-14 h-14"
         style={{ bottom: '5.5rem', right: '1.25rem' }}
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
@@ -34,7 +35,8 @@ export default function FloatingCTA() {
         whileHover={{ scale: 1.12 }}
         whileTap={{ scale: 0.95 }}
       >
-        <MessageCircle size={26} color="white" fill="white" />
+        <img src={wha} alt="wApp-logo" className='h-full w-full  object-contain' />
+        {/* <MessageCircle size={26} color="white" fill="white" /> */}
       </motion.a>
 
       {/* Sticky CTA bar — mobile only */}

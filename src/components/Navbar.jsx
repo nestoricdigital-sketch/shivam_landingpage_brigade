@@ -119,12 +119,12 @@ export default function Navbar() {
             transition={{ duration: 0.4, ease: 'easeInOut' }}
           >
             <div className="flex flex-col items-center justify-center h-full gap-8">
-              <div className="flex flex-col leading-none text-center mb-4">
+              {/* <div className="flex flex-col leading-none text-center mb-4">
                 <span className="font-['Playfair_Display',serif] text-white text-3xl font-semibold">Brigade</span>
                 <span className="font-['Inter',sans-serif] text-[0.7rem] font-medium tracking-[0.22em] uppercase text-[#C8A96A]">
                   Eternia
                 </span>
-              </div>
+              </div> */}
 
               {NAV_LINKS.map((link, i) => (
                 <motion.button
