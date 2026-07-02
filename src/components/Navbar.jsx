@@ -146,11 +146,11 @@ export default function Navbar() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 }}
               >
-                <a href="tel:+919876543210" className={BTN_PRIMARY}>
+                <a href="tel:+918618297315" className={BTN_PRIMARY}>
                   <Phone size={16} /> Call Now
                 </a>
                 <a
-                  href="https://wa.me/919876543210?text=Hi%2C%20I'm%20interested%20in%20Brigade%20Eternia.%20Please%20share%20more%20details."
+                  href="https://wa.me/918618297315?text=Hi%2C%20I'm%20interested%20in%20Brigade%20Eternia.%20Please%20share%20more%20details."
                   target="_blank"
                   rel="noopener noreferrer"
                   className={BTN_OUTLINE}
