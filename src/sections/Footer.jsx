@@ -31,7 +31,7 @@ export default function Footer() {
             </div>
             <p className="font-['Inter',sans-serif] text-[0.875rem] text-white/45 leading-[1.75] max-w-[280px]">
               A 14-acre luxury residential community with 80% open green spaces and
-              1124 premium homes in Yelahanka, North Bengaluru.
+              premium homes in Yelahanka, North Bengaluru.
             </p>
             {/* <div className="inline-block mt-4 bg-[rgba(200,169,106,0.1)] border border-[rgba(200,169,106,0.25)]
                             rounded-lg px-[0.875rem] py-2">

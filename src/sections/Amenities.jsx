@@ -6,22 +6,22 @@ import {
 } from 'lucide-react';
 
 const AMENITIES = [
-  { icon: Star,            label: 'Grand Clubhouse',     desc: 'World-class social & recreation hub' },
-  { icon: Waves,           label: 'Swimming Pool',        desc: 'Temperature-controlled luxury pool' },
-  { icon: Dumbbell,        label: 'Modern Gym',           desc: 'State-of-the-art fitness centre' },
-  { icon: Star,            label: 'Sports Courts',        desc: 'Tennis, basketball & multi-sport' },
-  { icon: Tv2,             label: 'Mini Theatre',         desc: 'Private screening experience' },
-  { icon: UtensilsCrossed, label: 'Banquet Hall',         desc: 'Elegant event & celebration space' },
-  { icon: Baby,            label: "Children's Play Area", desc: 'Safe & imaginative play zones' },
-  { icon: Trees,           label: 'Landscaped Gardens',   desc: 'Curated green walkways & parks' },
-  { icon: Shield,          label: '24×7 Security',        desc: 'CCTV & manned access control' },
-  { icon: Heart,           label: 'Crèche',               desc: 'Professional childcare facility' },
+  { icon: Star, label: 'Grand Clubhouse', desc: 'World-class social & recreation hub' },
+  { icon: Waves, label: 'Swimming Pool', desc: 'Temperature-controlled luxury pool' },
+  { icon: Dumbbell, label: 'Modern Gym', desc: 'State-of-the-art fitness centre' },
+  { icon: Star, label: 'Sports Courts', desc: 'Tennis, basketball & multi-sport' },
+  { icon: Tv2, label: 'Mini Theatre', desc: 'Private screening experience' },
+  { icon: UtensilsCrossed, label: 'Banquet Hall', desc: 'Elegant event & celebration space' },
+  { icon: Baby, label: "Children's Play Area", desc: 'Safe & imaginative play zones' },
+  { icon: Trees, label: 'Landscaped Gardens', desc: 'Curated green walkways & parks' },
+  { icon: Shield, label: '24×7 Security', desc: 'CCTV & manned access control' },
+  { icon: Heart, label: 'Day Care', desc: 'Professional childcare facility' },
 ];
 
 const CONTAINER = 'w-full max-w-[1600px] mx-auto px-6 md:px-12 xl:px-[5vw]';
 
 function AmenityCard({ amenity, index }) {
-  const ref    = useRef(null);
+  const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: '-50px' });
 
   return (
@@ -70,7 +70,7 @@ function AmenityCard({ amenity, index }) {
 }
 
 export default function Amenities() {
-  const headRef    = useRef(null);
+  const headRef = useRef(null);
   const headInView = useInView(headRef, { once: true, margin: '-60px' });
 
   return (
