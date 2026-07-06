@@ -11,8 +11,8 @@ const HIGHLIGHTS = [
   { icon: Home, value: '1124', suffix: '', label: 'Premium Homes' },
   { icon: Building2, value: '12', suffix: '', label: 'Elegant Towers' },
   { icon: Layers, value: 'G+14', suffix: '', label: 'Floors Per Tower' },
-  { icon: LayoutGrid, value: '2,3,4', suffix: '', label: 'BHK Configurations' },
-  { icon: Calendar, value: '2030', suffix: '', label: 'Possession From' },
+  { icon: LayoutGrid, value: '3,4', suffix: '', label: 'BHK Configurations' },
+  { icon: Calendar, value: '2029', suffix: '', label: 'Possession From' },
   { icon: ShieldCheck, value: 'RERA', suffix: '', label: 'Approved Project' },
 ];
 
